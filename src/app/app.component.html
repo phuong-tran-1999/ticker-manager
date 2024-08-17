@@ -1,1 +1,15 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<tm-header></tm-header>
+
+<div class="w-full h-full overflow-auto">
+    <div class="flex w-full h-full px-8 py-2 sm:px-12 md:px-20 xl:px-40 xl:py-4">
+        <div class="w-full">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+@defer (on viewport) {
+<tm-footer></tm-footer>
+} @placeholder {
+<tm-skeleton height="100px"></tm-skeleton>
+}
