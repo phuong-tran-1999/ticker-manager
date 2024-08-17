@@ -1,26 +1,27 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2022",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@layout/footer": ["lib/layout/footer/src/index.ts"],
-      "@layout/header": ["lib/layout/header/src/index.ts"],
-      "@modules/home": ["lib/home/src/index.ts"],
-      "@shared/data-access": ["lib/shared/data-access/src/index.ts"],
-      "@shared/ui/skeleton": ["lib/shared/ui/skeleton/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2022",
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@layout/footer": ["lib/layout/footer/src/index.ts"],
+            "@layout/header": ["lib/layout/header/src/index.ts"],
+            "@modules/home": ["lib/home/src/index.ts"],
+            "@shared/core": ["lib/shared/core/src/index.ts"],
+            "@shared/data-access": ["lib/shared/data-access/src/index.ts"],
+            "@shared/ui/skeleton": ["lib/shared/ui/skeleton/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
 }
