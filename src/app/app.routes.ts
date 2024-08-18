@@ -5,14 +5,10 @@ export const appRoutes: Route[] = [
         path: '',
         pathMatch: 'full',
         loadComponent: () => import('@modules/home').then((c) => c.HomeComponent),
-        title: 'Home',
-        data: {
-            title: 'home',
-        },
+        title: 'Ticket Manager',
     },
     {
         path: '**',
         redirectTo: '',
-        title: 'Home',
     },
 ];

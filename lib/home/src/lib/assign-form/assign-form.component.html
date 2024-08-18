@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>{{ isEdit ? 'Edit Ticket' : 'Create New Ticket' }}</h2>
+<mat-dialog-content>
+    <form [formGroup]="form" class="flex flex-col h-full py-2 gap-y-2">
+        <mat-form-field>
+            <mat-label>Assignee</mat-label>
+            <mat-select formControlName="assignee" [compareWith]="compareWithId">
+                <mat-option *ngFor="let user of users$ | async" [value]="user">
+                    {{ user.name }}
+                </mat-option>
+            </mat-select>
+
+            @if (form.controls.assignee.hasError('required')) {
+                <mat-error>This field is required</mat-error>
+            }
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="submit()" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

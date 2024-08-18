@@ -9,7 +9,7 @@ export class UserApiService {
 
     private _apiService = inject(ApiService);
 
-    search(query = {}): Observable<User> {
+    search(query = {}): Observable<User[]> {
         return this._apiService.get(UserApiService.ROOT_POINT, query);
     }
 

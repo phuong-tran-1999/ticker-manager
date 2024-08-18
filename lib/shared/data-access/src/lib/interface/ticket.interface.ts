@@ -4,3 +4,9 @@ export interface Ticket {
     assigneeId: null | number;
     completed: boolean;
 }
+
+export interface TicketFull extends Ticket {
+    assignee?: string;
+}
+
+export type TicketStatus = 'open' | 'completed';
